@@ -44,7 +44,7 @@
                                     <td><?php echo $knyga['puslapiu_sk']; ?></td>
                                     <td><?php echo $knyga['pridejimo_data']; ?></td>
                                     <td>
-                                        <a href="">Peržiūrėti</a>
+                                        <a href="view.php?knygos_id=<?php echo $knyga['id']; ?>">Peržiūrėti</a>
                                         <a href="">Atnaujinti</a>
                                         <a href="">Šalinti</a>
                                     </td>
