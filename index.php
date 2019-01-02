@@ -46,7 +46,7 @@
                                     <td>
                                         <a href="view.php?knygos_id=<?php echo $knyga['id']; ?>">Peržiūrėti</a>
                                         <a href="edit.php?id=<?php echo $knyga['id']; ?>">Atnaujinti</a>
-                                        <a href="">Šalinti</a>
+                                        <a href="delete.php?id=<?php echo $knyga['id']; ?>">Šalinti</a>
                                     </td>
                                 </tr>
 
