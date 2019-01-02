@@ -14,7 +14,7 @@
 
 <div class="content">
     <p>
-        <a href="">Nauja knyga</a>
+        <a href="new.php">Nauja knyga</a>
     </p>
 
     <?php
