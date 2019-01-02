@@ -1,0 +1,12 @@
+1. padaryti normalų dizainą, uždėti bootstrap
+2. padaryti not-found.php failą
+3. pridėti įrašo atnaujinimo laiką
+4. pridėti tiražo stulpelį
+5. visur pridėti navbar
+5. sukurti šiuos naujus puslapius:
+	5.1. kur visos knygos būtų atvaizduojamos visiškai kitaip
+	5.2. kur būtų atvaizduojami tik knygų pavadinimai
+	5.3. ...
+
+sekanti užduotis:
+	susigalvoti kitą temą ir viską atkartoti pagal parodytus CRUD principus
