@@ -1,5 +1,13 @@
 <?php include("header.php"); ?>
 
+<?php
+
+    $sql = "SELECT id, pavadinimas, autorius, kaina, puslapiu_sk, pridejimo_data
+            FROM knygos";
+    $rezultatai = $conn->query($sql);
+
+?>
+
 <header>
     <h1>Knygos</h1>
 </header>
@@ -9,40 +17,53 @@
         <a href="">Nauja knyga</a>
     </p>
 
-    <table border="1">
-        <tr>
-            <th>Pavadinimas</th>
-            <th>Autorius</th>
-            <th>Kaina, eur</th>
-            <th>Puslapių sk.</th>
-            <th>Pridėjimo data</th>
-            <th>Veiksmai</th>
-        </tr>
-        <tr>
-            <td>aa</td>
-            <td>bb</td>
-            <td>cc</td>
-            <td>dd</td>
-            <td>dd</td>
-            <td>
-                <a href="">Peržiūrėti</a>
-                <a href="">Atnaujinti</a>
-                <a href="">Šalinti</a>
-            </td>
-        </tr>
-        <tr>
-            <td>aa</td>
-            <td>bb</td>
-            <td>cc</td>
-            <td>dd</td>
-            <td>dd</td>
-            <td>
-                <a href="">Peržiūrėti</a>
-                <a href="">Atnaujinti</a>
-                <a href="">Šalinti</a>
-            </td>
-        </tr>
-    </table>
+    <?php
+    
+        if ($rezultatai->num_rows > 0) {
+            ?>
+
+                <table border="1">
+                    <tr>
+                        <th>Pavadinimas</th>
+                        <th>Autorius</th>
+                        <th>Kaina, eur</th>
+                        <th>Puslapių sk.</th>
+                        <th>Pridėjimo data</th>
+                        <th>Veiksmai</th>
+                    </tr>
+
+                    <?php
+
+                        while ($knyga = $rezultatai->fetch_assoc()) {
+                            ?>
+
+                                <tr>
+                                    <td><?php echo $knyga['pavadinimas']; ?></td>
+                                    <td><?php echo $knyga['autorius']; ?></td>
+                                    <td><?php echo $knyga['kaina']; ?></td>
+                                    <td><?php echo $knyga['puslapiu_sk']; ?></td>
+                                    <td><?php echo $knyga['pridejimo_data']; ?></td>
+                                    <td>
+                                        <a href="">Peržiūrėti</a>
+                                        <a href="">Atnaujinti</a>
+                                        <a href="">Šalinti</a>
+                                    </td>
+                                </tr>
+
+                            <?php
+                        }
+
+                    ?>
+                    
+                </table>
+
+            <?php
+        } else {
+            echo "<p>Nieko nerasta.</p>";
+        }
+    
+    ?>
+    
 </div>
 
 <?php include("footer.php"); ?>
