@@ -7,7 +7,7 @@
 <div class="content">
     <p><a href="index.php">Grįžti</a></p>
     
-    <form action="new_action.php" method="get">
+    <form action="new_action.php" method="post">
         <div class="group">
             <label for="pavadinimas">Pavadinimas</label>
             <input type="text" id="pavadinimas" name="pavadinimasInput">
